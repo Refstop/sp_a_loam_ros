@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-8de849065ab6687d2b7b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "sp_a_loam_ros2",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "scan_registration_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-scan_registration_node-Release-a7fa2150d9667ccfe65d.json",
+					"name" : "scan_registration_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sp_a_loam_ros2_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sp_a_loam_ros2_uninstall-Release-9fc91b81695080bf4d9e.json",
+					"name" : "sp_a_loam_ros2_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-Release-5d7c41f1b65a78d30a86.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/bhbhchoi/ros/dev_ws/src/sp_a_loam_ros2/cmake-build-debug",
+		"source" : "/home/bhbhchoi/ros/dev_ws/src/sp_a_loam_ros2"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
