@@ -4,7 +4,7 @@
 #include "scan_registration_wrapper/scan_registration_wrapper.h"
 
 scanRegistrationWrapper::scanRegistrationWrapper(scanRegistrationOption option):
-scan_registration_handler_(std::make_unique<scanRegistration>(std::move(option))) {
+    scan_registration_handler_(std::make_unique<scanRegistration>(std::move(option))) {
     sub_laser_cloud_ = nh_.subscribe(
             "velodyne_points", 100,
             &scanRegistrationWrapper::laserCloudCallback, this);
@@ -47,8 +47,8 @@ void scanRegistrationWrapper::laserCloudCallback(const sensor_msgs::PointCloud2:
     pub_surf_points_less_flat_.publish(surf_points_less_flat2);
 }
 
-void scanRegistrationWrapper::pclToMsg(const pcl::PointCloud<PointType> &laser_cloud, sensor_msgs::PointCloud2 &laser_cloud_out_msg, const ros::Time timestamp) {
-    pcl::toROSMsg(laser_cloud, laser_cloud_out_msg);
+void scanRegistrationWrapper::pclToMsg(const pcl::PointCloud<PointType>::Ptr laser_cloud, sensor_msgs::PointCloud2 &laser_cloud_out_msg, const ros::Time timestamp) {
+    pcl::toROSMsg(*laser_cloud, laser_cloud_out_msg);
     laser_cloud_out_msg.header.stamp = timestamp;
     laser_cloud_out_msg.header.frame_id = "camera_init";
 }

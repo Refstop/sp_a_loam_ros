@@ -14,10 +14,10 @@ using namespace std::chrono_literals;
 
 class scanRegistrationWrapper {
 public:
-    scanRegistrationWrapper(scanRegistrationOption option);
+    scanRegistrationWrapper(srOption option);
 private:
     void laserCloudCallback(const sensor_msgs::PointCloud2::ConstPtr& laser_cloud_msg);
-    void pclToMsg(const pcl::PointCloud<PointType> &laser_cloud, sensor_msgs::PointCloud2 &laser_cloud_out_msg, const ros::Time timestamp);
+    void pclToMsg(const pcl::PointCloud<PointType>::Ptr laser_cloud, sensor_msgs::PointCloud2 &laser_cloud_out_msg, const ros::Time timestamp);
     std::unique_ptr<scanRegistration> scan_registration_handler_;
     ros::NodeHandle nh_;
     ros::Subscriber sub_laser_cloud_;

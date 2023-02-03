@@ -8,7 +8,7 @@
 
 int main(int argc, char* argv[]) {
     ros::init(argc, argv, "scan_registration_node");
-    scanRegistrationOption option("VLP16", true);
+    srOption option("VLP16", true);
     auto scan_registration_node = std::make_shared<scanRegistrationWrapper>(option);
     ros::spin();
     ros::shutdown();

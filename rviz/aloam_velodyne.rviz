@@ -94,7 +94,7 @@ Visualization Manager:
       Size (Pixels): 3
       Size (m): 0.009999999776482582
       Style: Flat Squares
-      Topic: /laser_cloud_flat
+      Topic: /laser_cloud_less_flat
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
@@ -122,7 +122,7 @@ Visualization Manager:
       Size (Pixels): 3
       Size (m): 0.009999999776482582
       Style: Flat Squares
-      Topic: /laser_cloud_flat_sp
+      Topic: /laser_cloud_less_flat_sp
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true

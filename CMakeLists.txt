@@ -41,7 +41,10 @@ include_directories(
 add_executable(scan_registration_node src/scan_registration_wrapper.cpp src/scan_registration_node.cpp)
 target_link_libraries(scan_registration_node ${catkin_LIBRARIES} SP_A_LOAM)
 
-install(TARGETS scan_registration_node
+add_executable(laser_odometry_node src/laser_odometry_wrapper.cpp src/laser_odometry_node.cpp)
+target_link_libraries(laser_odometry_node ${catkin_LIBRARIES} SP_A_LOAM)
+
+install(TARGETS scan_registration_node laser_odometry_node
         ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
         LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
         RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
