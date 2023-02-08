@@ -102,6 +102,8 @@ void laserOdometryWrapper::run() {
 
                 sensor_msgs::PointCloud2 laser_cloud_full_res;
                 pclToMsg(laser_odometry_handler_->getLaserCloudFullRes(), laser_cloud_full_res);
+
+                ROS_INFO("laser_cloud_full_res.data.size() = %d", laser_cloud_full_res.data.size());
                 pub_laser_cloud_full_res_.publish(laser_cloud_full_res);
 
                 frame_count_++;

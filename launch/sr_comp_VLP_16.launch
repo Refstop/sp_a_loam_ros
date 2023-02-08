@@ -33,12 +33,12 @@
     <!-- <node pkg="scaloam_velodyne" type="scalaserOdometry" name="scalaserOdometry" output="screen" />
     <node pkg="scaloam_velodyne" type="scalaserMapping" name="scalaserMapping" output="screen" />
     <node pkg="scaloam_velodyne" type="scalaserPGO" name="scalaserPGO" output="screen" /> -->
-    <node pkg="rosbag" type="play" name="player" output="screen" args="--clock -l /home/bhbhchoi/ros/catkin_ws/src/LOAM-Family_Study/bag/nsh_indoor_outdoor.bag"/>
+    <node pkg="rosbag" type="play" name="player" output="screen" args="--clock -l /root/docker_ws/ros/catkin_ws/src/LOAM-Family_Study/bag/nsh_indoor_outdoor.bag"/>
 
     <!-- visulaization -->
     <arg name="rviz" default="true" />
     <group if="$(arg rviz)">
-        <node launch-prefix="nice" pkg="rviz" type="rviz" name="rviz" args="-d $(find sp_a_loam_ros)/rviz/aloam_velodyne.rviz" />
+        <node launch-prefix="nice" pkg="rviz" type="rviz" name="rviz" args="-d $(find sp_a_loam_ros)/rviz/scan_registration.rviz" />
     </group>
 
 </launch>
