@@ -2,8 +2,8 @@
 // Created by bhbhchoi on 23. 1. 26.
 //
 
-#ifndef SP_A_LOAM_ROS_SCAN_REGISTRATION_WRAPPER_H
-#define SP_A_LOAM_ROS_SCAN_REGISTRATION_WRAPPER_H
+#ifndef SP_A_LOAM_ROS_SCAN_REGISTRATION_NODE_H
+#define SP_A_LOAM_ROS_SCAN_REGISTRATION_NODE_H
 #include <ros/ros.h>
 #include <sensor_msgs/PointCloud2.h>
 
@@ -12,9 +12,9 @@
 
 using namespace std::chrono_literals;
 
-class scanRegistrationWrapper {
+class scanRegistrationNode {
 public:
-    scanRegistrationWrapper(srOption option);
+    scanRegistrationNode(srOption option);
 private:
     void laserCloudCallback(const sensor_msgs::PointCloud2::ConstPtr& laser_cloud_msg);
     void pclToMsg(const pcl::PointCloud<PointType>::Ptr laser_cloud, sensor_msgs::PointCloud2 &laser_cloud_out_msg, const ros::Time timestamp);
@@ -28,4 +28,4 @@ private:
                    pub_surf_points_less_flat_;
 };
 
-#endif //SP_A_LOAM_ROS_SCAN_REGISTRATION_WRAPPER_H
+#endif //SP_A_LOAM_ROS_SCAN_REGISTRATION_NODE_H
